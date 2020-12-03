@@ -1,0 +1,18 @@
+zuul:
+  prefix: /api
+  ignoredServices: "*"
+  routes:
+    vets-service-yoshio: /vet/**
+    visits-service-yoshio: /visit/**
+    customers-service-yoshio: /customer/**
+    api-gateway-yoshio: /gateway/**
+
+server:
+  port: 8080
+  compression:
+    enabled: true
+    mime-types: application/json,text/css,application/javascript
+    min-response-size: 2048
+
+# Internationalization
+spring.messages.basename: messages/messages
